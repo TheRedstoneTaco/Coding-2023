@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+printf("Hello, World! Live from Dallas, Texas!");
+return 0;
+}
+all: greet generate goodbye
+
+greet:
+        @echo "This is the greeting to the making."
+
+generate:
+        @echo "Generating throwaways..."
+        touch rmme-{1..10}.txt
+
+goodbye:
+        @echo "Goodbye trash!"
+        rm rmme-*.txt
